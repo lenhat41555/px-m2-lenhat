@@ -1,0 +1,82 @@
+﻿@model Book
+
+
+<form method="post" asp-action="Create">
+    <div class="border">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group row">
+            <h2 class="text-info">Add Category</h2>
+        </div>
+
+        <div class="row">
+            <div class="col-8">
+                <div class="row form-group">
+                    <div class="col-4">
+                        <label asp-for="NameBook"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="NameBook" class="form-control" />
+                        <span asp-validation-for="NameBook" class="text-danger"></span>
+                    </div>
+                </div>
+
+
+                <div class="row form-group">
+                    <div class="col-4">
+                        <label asp-for="Author"></label>
+                    </div>
+                    <div class="col-8">
+                        <textarea asp-for="Author" class="form-control"></textarea>
+                        <span asp-validation-for="Author" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-4">
+                        <label asp-for="Content"></label>
+                    </div>
+                    <div class="col-8">
+                        <textarea asp-for="Content" class="form-control"></textarea>
+                        <span asp-validation-for="Content" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-4">
+                        <label asp-for="PublishingYear"></label>
+                    </div>
+                    <div class="col-8">
+                        <textarea asp-for="PublishingYear" class="form-control"></textarea>
+                        <span asp-validation-for="PublishingYear" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-4">
+                        <label asp-for="Amount"></label>
+                    </div>
+                    <div class="col-8">
+                        <textarea asp-for="Amount" class="form-control"></textarea>
+                        <span asp-validation-for="Amount" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-4">
+                        <label asp-for="CategoryId"></label>
+                    </div>
+                    <div class="col-8">
+                        <textarea asp-for="CategoryId" class="form-control"></textarea>
+                        <span asp-validation-for="CategoryId" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col">
+                        <input type="submit" value="Submit" class="btn btn-info" />
+                    </div>
+                    <div class="col">
+                        <a asp-action="Index" class="btn btn-success">Back</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</form>
+
